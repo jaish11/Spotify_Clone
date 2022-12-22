@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spotify-Clone</title>
+        <link rel="icon" href="https://cdn.pixabay.com/photo/2016/10/22/00/15/spotify-1759471__340.jpg">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    background-color: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color:  #242026;
+    color: #8f7cec;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container{
+    min-height: 58vh;
+    background-color:  #242026;
+    color: #8f7cec;
+   font-family: 'Varela Round', sans-serif;
+   display: flex;
+   margin: 23px auto;
+   width: 70%;
+   border-radius: 12px;
+   padding: 34px;
+   /* background-image: url('bg.jpg'); */
+}
+
+.bottom{
+    position: sticky;
+    bottom: 0;
+    height: 130px;
+    background-color:  #242026;
+    color: #8f7cec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.icons{
+    margin-top: 14px; 
+}
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw; 
+    cursor: pointer;
+}
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid #242026;
+    width: 300px;
+    height: 300px;
+    padding: 34px;
+    margin: 3px 5px;
+    border-radius: 25px;
+    background: black;
+    box-shadow: 0 15px 25px rgba(143,124,236,0.7);
+    margin-bottom: 20px;
+}
+#services .box img{
+    width: 300px;
+   height: 250px;
+    margin: auto;
+    display: block;
+}
+#services .box button{
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 30px;
+    background-color: #242026;
+    font-size: 20px;
+}
+#services .box button:hover{
+    background-color:  rgb(185, 158, 158);
+}
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+        </style>
+    </head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="Spotify"> Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+            
+            <section id="services-container">
+                <h1 class="h-primary center">Welcome to My Favourite Song in my</h1>
+                <div id="services">
+                    <div class="box">
+                        <img src="https://cdn.pixabay.com/photo/2016/03/16/23/55/flea-market-1262036__340.jpg" alt="">
+                        <h2 class="h-secondry center">Hindi Song</h2>
+                        <button class="btn"><a href="index1.html">Playlist</a></button>
+                    </div>
+                    <div class="box">
+                        <img src="https://cdn.pixabay.com/photo/2016/01/14/06/09/woman-1139397__340.jpg" alt="">
+                        <h2 class="h-secondry center">English Song</h2>
+                        <button class="btn"><a href="index1.html">Playlist</a></button>
+                        
+                    </div>
+                    <div class="box">
+                        <img src="https://cdn.pixabay.com/photo/2016/03/28/09/36/music-1285165__340.jpg" alt="">
+                        <h2 class="h-secondry center">Punjabi Song</h2>
+                        <button class="btn"><a href="index1.html">Playlist</a></button>
+                       
+                    </div>
+                </div>
+                </section>
+               
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i> 
+        </div>
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Warriyo - Mortals [NCS Release]</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+</body>
+</html>
